@@ -2,10 +2,10 @@ import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
-import Home from './../screens/Home';
-import Cuenta from './../screens/Cuenta';
-import Ciudades from './../screens/Ciudades';
-import Nosotros from './../screens/Nosotros';
+import CiudadesStack from "./CiudadesStack";
+import CuentaStack from "./CuentaStack";
+import InicioStack from "./HomeStack";
+import NosotrosStack from "./NosotrosStack";
 
 const Tab = createBottomTabNavigator();
 
@@ -15,22 +15,22 @@ export default function Navigation(){
             <Tab.Navigator>
                 <Tab.Screen 
                     name="home" 
-                    component={Home}
+                    component={InicioStack}
                     options={{ title: "Inicio" }}
                 />
                 <Tab.Screen 
                     name="register" 
-                    component={Cuenta}
+                    component={CuentaStack}
                     options={{ title: "Registro" }}
                 />
                 <Tab.Screen 
                     name="cities" 
-                    component={Ciudades}
+                    component={CiudadesStack}
                     options={{ title: "Ciudades" }}
                 />
                 <Tab.Screen 
                     name="us" 
-                    component={Nosotros}
+                    component={NosotrosStack}
                     options={{ title: "Nosotros" }}
                 />
 
